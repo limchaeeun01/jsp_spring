@@ -5,5 +5,8 @@
     <typeAliases>
         <typeAlias alias="userRequestDTO" type="com.example.demo.user.domain.UserRequestDTO" />
         <typeAlias alias="userResponseDTO"  type="com.example.demo.user.domain.UserResponseDTO" />
+        
+        <typeAlias alias="boardResponseDTO"  type="com.example.demo.board.domain.BoardResponseDTO" />
+        <typeAlias alias="userboardResponseDTO"  type="com.example.demo.board.domain.UserBoardResponseDTO" />
     </typeAliases>
 </configuration>

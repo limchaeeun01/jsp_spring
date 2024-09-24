@@ -3,11 +3,27 @@
 
 <mapper namespace="com.example.demo.user.dao.UserMapper" >
 
+<!--
     <select id="loginRow"
             parameterType="userRequestDTO"
             resultType="userResponseDTO">
         SELECT ID, PWD, NAME, POINT, IMGURL
-        FROM PROJECT_USER_TBL
+        FROM project_user_tbl
         WHERE ID = #{id} AND PWD = #{pwd}
+    </select>
+    -->
+
+    <insert id="joinRow"
+            parameterType="userRequestDTO">
+        INSERT INTO project_user_tbl(ID, PWD, NAME, IMGURL)
+        VALUES(#{id}, #{pwd}, #{name}, 'images.png')
+    </insert>
+
+    <select id="loginRow"
+            parameterType="userRequestDTO"
+            resultType="userResponseDTO">
+        SELECT ID, PWD, NAME, POINT, IMGURL
+        FROM project_user_tbl
+        WHERE ID = #{id}
     </select>
 </mapper>

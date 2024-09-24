@@ -263,13 +263,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="/resources/img/${loginUser.imgUrl }" class="user-image" alt="User Image"/>
+                  <img src="/resources/img/${loginUser.imgUrl}" class="user-image" alt="User Image"/>
                   <span class="hidden-xs">${loginUser.name }</span>
                 </a>
                 <ul class="dropdown-menu">
                   
                   <li class="user-header">
-                    <img src="/resources/img/${loginUser.imgUrl }" class="img-circle" alt="User Image" />
+                    <img src="/resources/img/${loginUser.imgUrl}" class="img-circle" alt="User Image" />
                     <p>
                       Alexander Pierce - Web Developer
                       <small>Member since Nov. 2012</small>
@@ -293,7 +293,7 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="/user/logout.sinc" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="/user/logout.multicampus" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -364,12 +364,8 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <%-- 
-                <li><a href="/board/listAll"><i class="fa fa-circle-o"></i> Dashboard v1</a></li> 
-                <li><a href="/board/listCri"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                --%>
-                <li><a href="/board/listPage.sinc?pageNo=1"><i class="fa fa-clipboard" aria-hidden="true"></i>게시판</a></li>
-                <li><a href="/resources/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                <li><a href="/board/list.multicampus"><i class="fa fa-clipboard" aria-hidden="true"></i>전체 게시글</a></li>
+                <li><a href="/board/myPage.multicampus?id=${loginUser.id}"><i class="fa fa-circle-o"></i>내가 작성한 게시글</a></li>
               </ul>
             </li>
             <li class="treeview">

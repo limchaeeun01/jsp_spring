@@ -9,14 +9,18 @@ import com.example.demo.user.dao.UserMapper;
 
 @Service
 public class UserService {
-    
+
     @Autowired
     private UserMapper userMapper;
 
-    public UserResponseDTO login(UserRequestDTO params){
+    public UserResponseDTO login(UserRequestDTO params) {
         System.out.println("debug >>> UserService login");
         return userMapper.loginRow(params);
     }
 
+    public void join(UserRequestDTO params) {
+        System.out.println("debug >>> UserService join");
+        userMapper.joinRow(params);
+    }
 
 }
