@@ -13,6 +13,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.ui.Model;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.example.demo.user.domain.UserRequestDTO;
 import com.example.demo.user.domain.UserResponseDTO;
@@ -84,7 +85,8 @@ public class UserController {
     @PostMapping("/join.multicampus")
     public String join(@Valid UserRequestDTO params,
             BindingResult bindingResult,
-            Model model) {
+            Model model,
+            MultipartFile file) {
 
         System.out.println("debug >>> endpoint : /join.multicampus");
         System.out.println("debug >>> params : " + params);
@@ -108,7 +110,7 @@ public class UserController {
             String encoderPwd = passwordEncoder.encode(params.getPwd());
             System.out.println("debug >>> encoderPwd = " + encoderPwd);
             params.setPwd(encoderPwd);
-            userService.join(params);
+            userService.join(params, file);
 
             return "redirect:/";
         }

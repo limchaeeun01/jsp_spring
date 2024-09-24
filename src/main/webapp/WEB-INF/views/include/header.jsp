@@ -263,13 +263,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="/resources/img/${loginUser.imgUrl}" class="user-image" alt="User Image"/>
+                  <img src="/resources/img/${loginUser.imgUrl }" class="user-image" alt="User Image"/>
                   <span class="hidden-xs">${loginUser.name }</span>
                 </a>
                 <ul class="dropdown-menu">
                   
                   <li class="user-header">
-                    <img src="/resources/img/${loginUser.imgUrl}" class="img-circle" alt="User Image" />
+                    <img src="/resources/img/${loginUser.imgUrl }" class="img-circle" alt="User Image" />
                     <p>
                       Alexander Pierce - Web Developer
                       <small>Member since Nov. 2012</small>
